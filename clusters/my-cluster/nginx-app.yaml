@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: raju-nginx
+  name: raju-new
   namespace: default
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: raju-nginx
+      app: raju-new
   template:
     metadata:
       labels:
-        app: raju-nginx
+        app: raju-new
     spec:
       containers:
-      - name: raju-nginx
+      - name: raju-new
         image: nginx:latest
         ports:
         - containerPort: 80
@@ -26,7 +26,7 @@ metadata:
   namespace: default
 spec:
   selector:
-    app: raju-nginx
+    app: raju-new
   ports:
     - protocol: TCP
       port: 80
